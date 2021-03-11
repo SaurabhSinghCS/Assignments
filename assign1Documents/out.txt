@@ -1,0 +1,126 @@
+Welcome to LockedMe.com 
+Developed by Saurabh Singh 
+Press "S" to continue
+s
+You Are currently working one Main directory for all operations
+Please Make sure you enter "correct name of file or options". 
+Some options are
+Press "1" , "2" or "3" for
+1 to Display File name 
+2 to Display Other Options
+3 to Exit
+Enter option number:- 1
+Files in Main Directory are:-
+f
+
+
+Press "1" , "2" or "3" for
+1 to Display File name 
+2 to Display Other Options
+3 to Exit
+Enter option number:- 2
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 1
+Enter File name without space
+file
+file File Successfully Created
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 3
+Enter File name without space
+fi
+fi File not found in Main Directory
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 3
+Enter File name without space
+file
+file File found in Main Directory
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 2
+Enter File name without space
+f
+f File Successfully Deleted
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 2
+Enter File name without space
+f
+f File does not Exist
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 1
+Enter File name without space
+file
+file File Already Exist
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 1
+Enter File name without space
+file2
+file2 File Successfully Created
+
+
+Press "1" , "2", "3" or "4" for
+1 to Add a File 
+2 to Delete a File
+3 to Search a File 
+4 to Go to Main Menu
+Enter option number:- 4
+
+
+Press "1" , "2" or "3" for
+1 to Display File name 
+2 to Display Other Options
+3 to Exit
+Enter option number:- 1
+Files in Main Directory are:-
+file
+file2
+
+
+Press "1" , "2" or "3" for
+1 to Display File name 
+2 to Display Other Options
+3 to Exit
+Enter option number:- 3
+
+
+Thanks for Using LockedMe.com
