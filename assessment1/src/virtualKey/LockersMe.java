@@ -1,0 +1,75 @@
+package virtualKey;
+
+import java.util.IllegalFormatConversionException;
+import java.util.Scanner;
+
+
+public class LockersMe {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DisplayClass.welcomeMessage("Saurabh Singh");
+		sc.next();
+		if(fileHandling.isFileExist()) {
+			if (fileHandling.createFolder()) {
+				System.out.println();
+			}
+		}
+		System.out.println("You Are currently working one Main directory for all operations");
+		System.out.println("Please Make sure you enter \"correct name of file or options\". \nSome options are");
+		boolean flag = true,flag2 = false;
+		while(flag) {
+			DisplayClass.MainOptions();
+			try {
+				System.out.print("Enter option number:- ");
+				String s = sc.next();
+				int case1 = Integer.parseInt(s);
+				switch(case1){
+				case 1: fileHandling.DisplayFiles();
+				break;
+				case 2: DisplayClass.OtherOptions();
+				flag2 = true;
+				break;
+				case 3: flag = false;
+				break;
+				default: System.out.println("Please Enter the Valid Number");
+				break;
+				}
+				
+				while(flag2) {
+					try {
+						System.out.print("Enter option number:- ");
+						String s1 = sc.next();
+						int case2 = Integer.parseInt(s1);
+						switch(case2) {
+						case 1: String fileName = sc.nextLine();
+						fileHandling.AddFile(fileName);
+						break;
+						case 2: String fileName1 = sc.nextLine();
+						fileHandling.DeleteAFile(fileName1);
+						break;
+						case 3: String fileName2 = sc.nextLine();
+						fileHandling.SearchAFile(fileName2);
+						break;
+						case 4: flag2 = false;
+						break;
+						default: System.out.println("Please Enter the valid number");
+						}
+					} catch (IllegalFormatConversionException e) {
+						System.out.println("Please Make Sure you Enter Number for Options");
+					}
+				}
+				
+				
+			} catch (IllegalFormatConversionException e) {
+				System.out.println("Please Make Sure you Enter Number for Options");
+			}
+			
+		}
+		System.out.println("Thanks for Using LockedMe.com");
+		
+		
+
+	}
+
+}
