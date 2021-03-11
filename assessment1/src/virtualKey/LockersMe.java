@@ -9,7 +9,8 @@ public class LockersMe {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		DisplayClass.welcomeMessage("Saurabh Singh");
-		sc.next();
+		String fir = sc.next();
+		if(fir.charAt(0) == 'S' || fir.charAt(0) == 's') {
 		if(fileHandling.isFileExist()) {
 			if (fileHandling.createFolder()) {
 				System.out.println();
@@ -27,8 +28,7 @@ public class LockersMe {
 				switch(case1){
 				case 1: fileHandling.DisplayFiles();
 				break;
-				case 2: DisplayClass.OtherOptions();
-				flag2 = true;
+				case 2: flag2 = true;
 				break;
 				case 3: flag = false;
 				break;
@@ -36,29 +36,37 @@ public class LockersMe {
 				break;
 				}
 				
+				System.out.println("\n");
+				
 				while(flag2) {
+					DisplayClass.OtherOptions();
 					try {
 						System.out.print("Enter option number:- ");
 						String s1 = sc.next();
 						int case2 = Integer.parseInt(s1);
 						switch(case2) {
-						case 1: String fileName = sc.nextLine();
-						fileHandling.AddFile(fileName);
-						break;
-						case 2: String fileName1 = sc.nextLine();
-						fileHandling.DeleteAFile(fileName1);
-						break;
-						case 3: String fileName2 = sc.nextLine();
-						fileHandling.SearchAFile(fileName2);
-						break;
+						case 1: System.out.println("Enter File name without space");
+							String fileName = sc.next();
+							fileHandling.AddFile(fileName);
+							break;
+						case 2: System.out.println("Enter File name without space");
+							String fileName1 = sc.next();
+							fileHandling.DeleteAFile(fileName1);
+							break;
+						case 3: System.out.println("Enter File name without space");
+							String fileName2 = sc.next();
+							fileHandling.SearchAFile(fileName2);
+							break;
 						case 4: flag2 = false;
-						break;
+							break;
 						default: System.out.println("Please Enter the valid number");
 						}
+						System.out.println("\n");
 					} catch (IllegalFormatConversionException e) {
 						System.out.println("Please Make Sure you Enter Number for Options");
 					}
 				}
+				
 				
 				
 			} catch (IllegalFormatConversionException e) {
@@ -68,7 +76,8 @@ public class LockersMe {
 		}
 		System.out.println("Thanks for Using LockedMe.com");
 		
-		
+		}
+		sc.close();
 
 	}
 

@@ -1,6 +1,9 @@
 package virtualKey;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 
@@ -16,11 +19,12 @@ public class fileHandling {
 	}
 	public static boolean createFolder() {
 		File file = new File("Main");
-		return file.mkdir();
+		return file.mkdirs();
 	}
 	public static void DisplayFiles(){
 		File file = new File("Main");
 		String string[] = file.list();
+		if(string != null)
 		Arrays.sort(string);
 		DisplayClass.PrintFiles(string);
 	}
@@ -37,14 +41,19 @@ public class fileHandling {
 	}
 	
 	public static void AddFile(String fileName) {
-		File file = new File("Main/"+fileName);
+//		Path path = new path("Main");
+		Path path = Paths.get("./Main/"+fileName);
+		File file = new File("./Main/"+fileName);
 		if(!file.exists()) {
 			try {
-				if(file.createNewFile()) {
+				Files.createDirectories(path.getParent());
+				Files.createFile(path);
+				if(file.exists()) {
 					System.out.println(fileName+" File Successfully Created");
 				}
-			} catch (IOException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
+				System.out.println(e.getMessage()+"   "+e.getCause());
 			}
 		}
 		else {
@@ -57,7 +66,7 @@ public class fileHandling {
 			System.out.println(fileName+" File found in Main Directory");
 		}
 		else {
-			System.out.println(fileName+" File found in Main Directory");
+			System.out.println(fileName+" File not found in Main Directory");
 		}
 	}
 
